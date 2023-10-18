@@ -1,11 +1,10 @@
 package com.example.webquestproject.quest;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class jspQuest implements Quest {
     private String jspPatch;
-    private ArrayList<Answer> answers = new ArrayList<>();
+    private final ArrayList<Answer> answers = new ArrayList<>();
     private String questText;
 
     public jspQuest() {

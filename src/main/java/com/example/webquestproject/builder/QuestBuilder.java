@@ -1,6 +1,5 @@
 package com.example.webquestproject.builder;
 
-import com.example.webquestproject.quest.Answer;
 import com.example.webquestproject.quest.Quest;
 
 public abstract class QuestBuilder {

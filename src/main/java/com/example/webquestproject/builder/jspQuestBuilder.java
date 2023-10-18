@@ -4,7 +4,6 @@ import com.example.webquestproject.quest.Answer;
 import com.example.webquestproject.quest.Quest;
 import com.example.webquestproject.quest.jspQuest;
 
-import java.util.ArrayList;
 
 public class jspQuestBuilder extends QuestBuilder {
 
