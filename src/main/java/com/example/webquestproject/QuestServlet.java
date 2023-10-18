@@ -24,17 +24,19 @@ public class QuestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
 
-        if (session.getAttribute("questId") == null || session.getAttribute("name") == null) {
+        if (session.getAttribute("name") == null)
+            resp.sendRedirect("/welcome");
+
+        if (session.getAttribute("questId") == null) {
             session.setAttribute("questId", "0-0");
             session.setAttribute("gameCount", 1);
-            resp.sendRedirect("/welcome");
         }
 
         req.setAttribute("quest", questMap.getQuest((String) session.getAttribute("questId")));
 
         req.getRequestDispatcher(
                 questMap.getQuest((String) session.getAttribute("questId")).getPattern())
-                .include(req, resp);
+                .forward(req, resp);
     }
 
     @Override
@@ -57,6 +59,6 @@ public class QuestServlet extends HttpServlet {
 
         req.getRequestDispatcher(
                         questMap.getQuest((String) session.getAttribute("questId")).getPattern())
-                        .include(req, resp);
+                        .forward(req, resp);
     }
 }

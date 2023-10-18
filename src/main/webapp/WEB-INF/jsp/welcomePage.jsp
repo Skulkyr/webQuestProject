@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Здесь будет какая нибудь история</h1>
-<form method="post" action="/welcome">
+<form action="/welcome">
     <input type="text" name="name" value="Введите ваше имя">
     <input type="submit" value="Начать путешествие">
 </form>

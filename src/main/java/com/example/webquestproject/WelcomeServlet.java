@@ -13,17 +13,16 @@ import java.io.IOException;
 public class WelcomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (req.getSession().getAttribute("name") == null)
-        req.getRequestDispatcher("WEB-INF/jsp/welcomePage.jsp").forward(req, resp);
-        else resp.sendRedirect("/quest");
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+
         if (req.getParameter("name") != null) {
             session.setAttribute("name", req.getParameter("name"));
             resp.sendRedirect("/quest");
-        }else req.getRequestDispatcher("WEB-INF/jsp/welcomePage.jsp").forward(req, resp);
+        }else if (req.getSession().getAttribute("name") == null)
+        req.getRequestDispatcher("WEB-INF/jsp/welcomePage.jsp").forward(req, resp);
+        else resp.sendRedirect("/quest");
+
+
+
     }
 }

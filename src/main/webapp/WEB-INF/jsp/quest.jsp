@@ -7,7 +7,7 @@
 <head>
     <title>Quest</title>
     <meta charset="utf-8">
-    <script src="../../resources/js/jspStandard.js"></script>
+    <script src="../../static/js/jspStandard.js"></script>
 </head>
 <body>
 <div>
