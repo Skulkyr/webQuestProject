@@ -1,6 +1,6 @@
-package com.example.webquestproject.builder;
+package com.javarush.quest.pogonin.builder;
 
-import com.example.webquestproject.quest.Quest;
+import com.javarush.quest.pogonin.quest.Quest;
 
 public abstract class QuestBuilder {
     protected final String PATCH;

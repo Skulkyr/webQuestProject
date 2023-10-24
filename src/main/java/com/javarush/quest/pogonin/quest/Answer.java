@@ -1,4 +1,4 @@
-package com.example.webquestproject.quest;
+package com.javarush.quest.pogonin.quest;
 
 public class Answer {
     private final String text;

@@ -1,0 +1,18 @@
+.center {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass
+{
+    width: max-content;
+    padding: 15px 15px 15px 15px;
+    border-radius:10px;
+    backdrop-filter: blur(4px) saturate(0%);
+    -webkit-backdrop-filter: blur(4px) saturate(0%);
+    background-color: rgba(238,229,229,0.27);
+}
+body {
+    background-image: url("../../static/image/background1.jpg");
+}

@@ -1,4 +1,4 @@
-package com.example.webquestproject;
+package com.javarush.quest.pogonin;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -18,11 +18,11 @@ public class WelcomeServlet extends HttpServlet {
         if (req.getParameter("name") != null) {
             session.setAttribute("name", req.getParameter("name"));
             resp.sendRedirect("/quest");
-        }else if (req.getSession().getAttribute("name") == null)
+
+        } else if (req.getSession().getAttribute("name") == null)
         req.getRequestDispatcher("WEB-INF/jsp/welcomePage.jsp").forward(req, resp);
+
         else resp.sendRedirect("/quest");
-
-
 
     }
 }

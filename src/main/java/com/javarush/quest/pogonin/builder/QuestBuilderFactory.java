@@ -1,4 +1,4 @@
-package com.example.webquestproject.builder;
+package com.javarush.quest.pogonin.builder;
 
 public class QuestBuilderFactory {
     public static QuestBuilder getQuestBuilder(FactoryType type, String... params) {

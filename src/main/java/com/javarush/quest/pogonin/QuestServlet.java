@@ -1,6 +1,6 @@
-package com.example.webquestproject;
+package com.javarush.quest.pogonin;
 
-import com.example.webquestproject.quest.questMap.QuestMap;
+import com.javarush.quest.pogonin.quest.questMap.QuestMap;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

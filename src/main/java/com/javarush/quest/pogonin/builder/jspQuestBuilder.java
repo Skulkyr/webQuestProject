@@ -1,8 +1,8 @@
-package com.example.webquestproject.builder;
+package com.javarush.quest.pogonin.builder;
 
-import com.example.webquestproject.quest.Answer;
-import com.example.webquestproject.quest.Quest;
-import com.example.webquestproject.quest.jspQuest;
+import com.javarush.quest.pogonin.quest.Answer;
+import com.javarush.quest.pogonin.quest.Quest;
+import com.javarush.quest.pogonin.quest.jspQuest;
 
 
 public class jspQuestBuilder extends QuestBuilder {

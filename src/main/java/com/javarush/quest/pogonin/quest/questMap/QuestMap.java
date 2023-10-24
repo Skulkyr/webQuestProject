@@ -1,9 +1,9 @@
-package com.example.webquestproject.quest.questMap;
+package com.javarush.quest.pogonin.quest.questMap;
 
-import com.example.webquestproject.builder.FactoryType;
-import com.example.webquestproject.builder.QuestBuilder;
-import com.example.webquestproject.builder.QuestBuilderFactory;
-import com.example.webquestproject.quest.Quest;
+import com.javarush.quest.pogonin.builder.FactoryType;
+import com.javarush.quest.pogonin.builder.QuestBuilderFactory;
+import com.javarush.quest.pogonin.builder.QuestBuilder;
+import com.javarush.quest.pogonin.quest.Quest;
 
 import java.util.HashMap;
 import java.util.Map;

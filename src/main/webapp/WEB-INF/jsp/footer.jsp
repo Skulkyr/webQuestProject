@@ -2,9 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../../static/css/general.css">
 </head>
 <body>
-<div>
+<div class="glass">
     <h3>Статистика:</h3>
     <ul>
         <li>IP address: <%=request.getRemoteAddr()%></li>
