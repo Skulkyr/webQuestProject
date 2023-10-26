@@ -15,7 +15,7 @@
 <body>
 
 <div class="center">
-    <div id="question" class="glass">
+    <div id="question" class="dialogWindow">
         <h2 id="textQuestion"><%=quest.getQuestion("")%></h2>
 
     <form id="answerForm" method="post">
