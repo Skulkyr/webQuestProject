@@ -10,21 +10,21 @@
     <title>Quest</title>
     <meta charset="utf-8">
     <script src="../../static/js/jspStandard.js"></script>
-    <link rel="stylesheet" href="../../static/css/general.css">
+    <link rel="stylesheet" href="../../static/css/general.scss">
 </head>
 <body>
 
 <div class="center">
-    <div id="question" class="dialogWindow">
-        <h2 id="textQuestion"><%=quest.getQuestion("")%></h2>
-
+    <div id="questionForm" class="dialogWindow">
     <form id="answerForm" method="post">
+        <fieldset class="chkgroup" role="radiogroup" aria-labelledby="question">
+            <legend id="question"><%=quest.getQuestion("")%></legend>
         <% for (int i = 0; i < answers.length; i++) {%>
-        <input id="answer${i}" type="radio" name="idAnswer" value="<%=answers[i].getNextQuestKey()%>"/>
-        <label for="answer${i}"><%=answers[i].getText()%></label>
-        <br>
+        <input id="answer<%=i%>" type="radio" name="idAnswer" value="<%=answers[i].getNextQuestKey()%>"/>
+        <label for="answer<%=i%>"><%=answers[i].getText()%></label>
         <%}%>
-        <input type="submit" value="Ответить">
+        </fieldset>
+        <button class="button" type="submit">Ответить</button>
     </form>
     </div>
 

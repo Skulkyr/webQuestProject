@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../../static/css/general.css">
+    <link rel="stylesheet" href="../../static/css/general.scss">
 </head>
 <body>
 <div class="glass">
