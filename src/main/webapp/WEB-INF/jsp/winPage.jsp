@@ -15,7 +15,6 @@
 </form>
 </div>
 </div>
-comlete
 
 <jsp:include page="footer.jsp"/>
 </body>
