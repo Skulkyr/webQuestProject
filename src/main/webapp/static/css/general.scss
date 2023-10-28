@@ -9,7 +9,6 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
   min-height: 100svh;
   place-content: center;
   place-items: center;
@@ -25,7 +24,8 @@ h1 {
 fieldset {
   display: flex;
   flex-direction: column;
-  border: rgba(180, 255, 180, 0);
+  border: rgba(130, 227, 9, 0);
+  border-radius: 200px;
   padding: 3em;
   color: rgba(224, 44, 44, 0.95);
 }
@@ -103,9 +103,8 @@ label:before {
 .dialogWindow {
   width: max-content;
   padding: 1px 15px 1px 15px;
-  border-radius:10px;
   background-color: rgba(216, 220, 211, 0.9);
-  box-shadow: rgba(216, 220, 211, 0.9) 0px 0px 21px 28px;
+  box-shadow: rgba(216, 220, 211, 0.9) 0 0 21px 28px;
 }
 
 form {
@@ -115,8 +114,8 @@ form {
 }
 
 .button {
-  width: 300px;
-  height: 60px;
+  min-width: 300px;
+  min-height: 60px;
   font-family: 'Nunito', sans-serif;
   font-size: 22px;
   text-transform: uppercase;

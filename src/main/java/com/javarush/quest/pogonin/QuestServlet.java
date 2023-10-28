@@ -21,15 +21,21 @@ public class QuestServlet extends HttpServlet {
     }
 
     @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (req.getSession().getAttribute("name") == null) {
+            resp.sendRedirect("/welcome");
+            return;
+        }
+            super.service(req, resp);
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
 
-        if (session.getAttribute("name") == null)
-            resp.sendRedirect("/welcome");
-
         if (session.getAttribute("questId") == null) {
             session.setAttribute("questId", "0-0");
-            session.setAttribute("gameCount", 1);
+            session.setAttribute("gameCount", 0);
         }
 
         req.setAttribute("quest", questMap.getQuest((String) session.getAttribute("questId")));
