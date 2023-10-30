@@ -1,6 +1,6 @@
-package com.javarush.quest.pogonin;
+package com.javarush.quest.pogonin.controllers;
 
-import com.javarush.quest.pogonin.quest.questMap.QuestMap;
+import com.javarush.quest.pogonin.repository.QuestMap;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -64,7 +64,7 @@ public class QuestServlet extends HttpServlet {
         req.setAttribute("quest", questMap.getQuest(answerQuestId));
 
         req.getRequestDispatcher(
-                        questMap.getQuest((String) session.getAttribute("questId")).getPattern())
+                        questMap.getQuest(answerQuestId).getPattern())
                         .forward(req, resp);
     }
 }

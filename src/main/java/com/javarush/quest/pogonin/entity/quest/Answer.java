@@ -1,4 +1,4 @@
-package com.javarush.quest.pogonin.quest;
+package com.javarush.quest.pogonin.entity.quest;
 
 public class Answer {
     private final String text;

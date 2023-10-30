@@ -1,9 +1,9 @@
-package com.javarush.quest.pogonin.quest.questMap;
+package com.javarush.quest.pogonin.repository;
 
-import com.javarush.quest.pogonin.builder.FactoryType;
-import com.javarush.quest.pogonin.builder.QuestBuilderFactory;
-import com.javarush.quest.pogonin.builder.QuestBuilder;
-import com.javarush.quest.pogonin.quest.Quest;
+import com.javarush.quest.pogonin.entity.quest.builder.QuestFactoryType;
+import com.javarush.quest.pogonin.entity.quest.builder.QuestBuilderFactory;
+import com.javarush.quest.pogonin.entity.quest.builder.QuestBuilder;
+import com.javarush.quest.pogonin.entity.quest.Quest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +40,7 @@ public class QuestMap {
 
     private static Map<String, Quest> createQuestMap() {
         Map<String, Quest> map = new HashMap<>();
-        QuestBuilder builder = QuestBuilderFactory.getQuestBuilder(FactoryType.jspQuest, "WEB-INF/jsp/quest.jsp");
+        QuestBuilder builder = QuestBuilderFactory.getQuestBuilder(QuestFactoryType.jspQuest, "WEB-INF/jsp/quest.jsp");
 
         map.put("0-0",
                 builder.setQuestText("Ты потерял память.<br><b>Принять вызов НЛО?</b>")

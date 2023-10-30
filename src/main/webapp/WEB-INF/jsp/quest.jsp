@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html;charset=cp1251" %>
-<%@ page import="com.javarush.quest.pogonin.quest.Answer" %>
-<%@ page import="com.javarush.quest.pogonin.quest.Quest" %>
+<%@ page import="com.javarush.quest.pogonin.entity.quest.Answer" %>
+<%@ page import="com.javarush.quest.pogonin.entity.quest.Quest" %>
 <%
     Quest quest = (Quest) request.getAttribute("quest");
     Answer[] answers = quest.getAnswerVariants("");

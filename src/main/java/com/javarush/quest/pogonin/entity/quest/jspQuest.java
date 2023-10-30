@@ -1,8 +1,8 @@
-package com.javarush.quest.pogonin.quest;
+package com.javarush.quest.pogonin.entity.quest;
 
 import java.util.ArrayList;
 
-public class jspQuest implements Quest {
+public class jspQuest extends Quest {
     private String jspPatch;
     private final ArrayList<Answer> answers = new ArrayList<>();
     private String questText;

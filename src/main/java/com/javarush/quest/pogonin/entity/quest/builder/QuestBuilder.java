@@ -1,6 +1,6 @@
-package com.javarush.quest.pogonin.builder;
+package com.javarush.quest.pogonin.entity.quest.builder;
 
-import com.javarush.quest.pogonin.quest.Quest;
+import com.javarush.quest.pogonin.entity.quest.Quest;
 
 public abstract class QuestBuilder {
     protected final String PATCH;
