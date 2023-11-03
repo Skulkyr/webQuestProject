@@ -3,6 +3,9 @@ package com.javarush.quest.pogonin.repository.user;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javarush.quest.pogonin.constants.Constants;
 import com.javarush.quest.pogonin.entity.user.User;
+import com.javarush.quest.pogonin.repository.user.exceptions.IncorrectPassword;
+import com.javarush.quest.pogonin.repository.user.exceptions.UserAlreadyExists;
+import com.javarush.quest.pogonin.repository.user.exceptions.UserNotFound;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -24,10 +27,11 @@ public class LocalUserRepository implements UserRepository {
     }
 
     @Override
-    public void putUser(User user) {
+    public void putUser(User user) throws UserAlreadyExists {
         Path userPatch = Path.of(Constants.USERS_PATCH + user.getName());
         try (FileWriter writer = new FileWriter(userPatch.toFile())) {
-            if (!Files.exists(userPatch))
+            if (Files.exists(userPatch))
+                throw new UserAlreadyExists();
                 Files.createFile(userPatch);
             Files.write(userPatch, "test".getBytes(StandardCharsets.UTF_8));
             ObjectMapper mapper = new ObjectMapper();
@@ -39,7 +43,7 @@ public class LocalUserRepository implements UserRepository {
     }
 
     @Override
-    public User getUser(String login, String password) {
+    public User getUser(String login, String password) throws UserNotFound, IncorrectPassword {
 
         try (FileReader reader = new FileReader(Constants.USERS_PATCH + login)) {
 
@@ -47,10 +51,10 @@ public class LocalUserRepository implements UserRepository {
             User user = mapper.readValue(reader, User.class);
             if (user.getPassword().equals(password))
                 return user;
-            return null;
+            throw new IncorrectPassword();
 
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            throw new UserNotFound();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
