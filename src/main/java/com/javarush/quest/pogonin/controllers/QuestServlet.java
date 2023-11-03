@@ -1,6 +1,6 @@
 package com.javarush.quest.pogonin.controllers;
 
-import com.javarush.quest.pogonin.repository.QuestMap;
+import com.javarush.quest.pogonin.repository.quest.QuestMap;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

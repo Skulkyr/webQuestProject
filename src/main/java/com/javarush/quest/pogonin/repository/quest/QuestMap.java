@@ -1,4 +1,4 @@
-package com.javarush.quest.pogonin.repository;
+package com.javarush.quest.pogonin.repository.quest;
 
 import com.javarush.quest.pogonin.entity.quest.builder.QuestFactoryType;
 import com.javarush.quest.pogonin.entity.quest.builder.QuestBuilderFactory;
@@ -8,7 +8,7 @@ import com.javarush.quest.pogonin.entity.quest.Quest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class QuestMap {
+public class QuestMap implements QuestRepository {
     private final Map<String, Quest> QUEST_MAP;
 
     private static volatile QuestMap map;
@@ -16,7 +16,7 @@ public class QuestMap {
     private QuestMap(Map<String, Quest> map) {
         QUEST_MAP = map;
     }
-
+    @Override
     public Quest getQuest(String key) {
         return QUEST_MAP.get(key);
     }
